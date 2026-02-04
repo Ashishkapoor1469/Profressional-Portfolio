@@ -32,7 +32,7 @@ export default function ScrubSection() {
         scale: 1,
         ease: "none",
       }).to(boxRef.current,{
-        x:"110%",
+        scale:3,
         delay:0.1,
         ease:"none"
       });
@@ -45,7 +45,7 @@ export default function ScrubSection() {
     <>
       <section
         ref={sectionRef}
-        className="h-screen p-3 bg-black flex items-center justify-center overflow-hidden"
+        className="h-screen p-3 bg-black flex items-center justify-center scale-3d overflow-hidden"
       >
         <div
           ref={boxRef}
@@ -55,7 +55,7 @@ export default function ScrubSection() {
         </div>
       </section>
 
-      <div className="h-screen bg-gray-200" />
+    
     </>
   );
 }

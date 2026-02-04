@@ -23,7 +23,7 @@ export default function PinnedFeatures() {
       itemsRef.current.forEach((item, i) => {
         tl.fromTo(
           item,
-          { opacity: 0, y: 40 },
+          { opacity: 0, y: 50 },
           { opacity: 1, y: 0, ease: "none" }
         ).to(item, { opacity: 0, y: -40, ease: "none" });
       });
@@ -39,7 +39,7 @@ export default function PinnedFeatures() {
         className="h-screen bg-black text-white flex items-center justify-center"
       >
         <div className="relative w-full max-w-xl text-center">
-          {["Fast", "Reliable", "Scalable"].map((text, i) => (
+          {["Fast", "Reliable", "Scalable","helpfull"].map((text, i) => (
             <h2
               key={i}
               ref={(el) => (itemsRef.current[i] = el)}
