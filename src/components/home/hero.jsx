@@ -4,7 +4,7 @@ export default function Hero() {
       {/* Background */}
       <div className="absolute inset-0 bg-primary w-full">
         <img
-          src="/assets/3.png"
+          src="/assets/3.webp"
           className="w-full h-full object-contain mix-blend-luminosity opacity-90 contrast-125"
         />
         <div className="absolute inset-0 bg-linear-to-t from-primary/40 to-transparent" />
@@ -36,7 +36,7 @@ export default function Hero() {
         <div className="p-1">
           <img
             className="w-24 h-32 object-cover grayscale"
-            src="/assets/boy.png"
+            src="/assets/boy.webp"
           />
         </div>
       </div>
