@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+.overlap-text {
+  line-height: 0.85;
+  letter-spacing: -0.05em;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/gc-epic-pro-font/GC-EPICPRO-Demo-BF6891cc5419ab8.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/gc-epic-pro-font/GC-EPICPRO-Demo-BF6891cc5419ab8.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}

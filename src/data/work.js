@@ -1,0 +1,4 @@
+export const works = [
+  { id: "01", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuD121RSW8skL1qJuhyq1dicN6j9W4NOnH1T9z9rM4iWJX7afucYlZOR4dvdLsLY1VAekOc3ZEsyFfr1qweThNwzxs_Z2iZu8nETb-pWWmCV_3t2wXc2sHpAlFb4tbOQGy32p8Nr0f4TkTRQCiGIeywVCxG4rjP-U0HJSDjh6DK72FPsjFyKoitzkYTBgSFCJmVpUpjvja_OPhPmID7OI-KlW6Bv5K8AXRZMk589jF_Q-8jpi3uVDh4IRfE5uuOGCXVSYni3DNHeclQC" },
+  { id: "02", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDU_p8AdBVBmA1TCcYlRODBLikHPg9gWRJCHQEY7vzx9dYyVf3ZobWmYWGFd2FF1UvHwlVfTOOJU572gjOgy_BUufG3e3cPlI2GkwzdOXl-mnafqku5uFwi6I5jj7QN2RTwM2kjnN-wOtvjfpwxBkmTohtFDjLffHrkZRDG2li8hOf730OQ98A7DDpHCj7B_LKvGGwhSDfp7EGMyzYm-lNhC4VVCgUgH1I8jY9CHjvZxLI17tc_Sda7fDzsQVaMkjvUidWqno4u5ueC" },
+];

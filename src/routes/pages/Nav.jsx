@@ -22,7 +22,7 @@ export default function Nav() {
   }, []);
 
   return (
-    <nav ref={navRef} className="flex gap-6 bg-black text-white p-6">
+    <nav ref={navRef} className="flex bg-black h-15 justify-evenly border-b border-neutral-700 w-full gap-6  text-white p-6">
       <a className="nav-item" href="#">
         Home
       </a>

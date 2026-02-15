@@ -8,6 +8,9 @@ export default function Landing() {
         repeat: -1,
         repeatDelay: 0.1,
       });
+      tl.to(sectionRef.current,{
+        
+      })
     }, sectionRef);
 
     return () => ctx.revert();
