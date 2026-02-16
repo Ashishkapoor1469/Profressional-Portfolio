@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function PinnedFeatures({Array}) {
+export default function PinnedFeatures({ Array }) {
   const sectionRef = useRef(null);
   const itemsRef = useRef([]);
 
@@ -24,7 +24,7 @@ export default function PinnedFeatures({Array}) {
         tl.fromTo(
           item,
           { opacity: 0, y: 50 },
-          { opacity: 1, y: 0, ease: "none" }
+          { opacity: 1, y: 0, ease: "none" },
         ).to(item, { opacity: 0, y: -40, ease: "none" });
       });
     });
@@ -38,12 +38,19 @@ export default function PinnedFeatures({Array}) {
         ref={sectionRef}
         className="h-screen bg-black text-white flex items-center justify-center"
       >
+        <div className="absolute h-screen w-full z-0">
+        <img
+          className="w-full h-full object-cover opacity-50"
+          src="/assets/2.png"
+          alt=""
+        />
+      </div>
         <div className="relative w-full max-w-xl text-center">
           {Array.map((text, i) => (
             <h2
               key={i}
               ref={(el) => (itemsRef.current[i] = el)}
-              className="absolute inset-0 text-5xl font-bold opacity-0"
+              className="absolute inset-0 text-5xl font-bold opacity-0 z-10"
             >
               {text}
             </h2>
