@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function PinnedFeatures() {
+export default function PinnedFeatures({Array}) {
   const sectionRef = useRef(null);
   const itemsRef = useRef([]);
 
@@ -14,7 +14,7 @@ export default function PinnedFeatures() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
-          end: "+=200%",
+          end: "+=100%",
           scrub: true,
           pin: true,
         },
@@ -39,7 +39,7 @@ export default function PinnedFeatures() {
         className="h-screen bg-black text-white flex items-center justify-center"
       >
         <div className="relative w-full max-w-xl text-center">
-          {["Fast", "Reliable", "Scalable","helpfull"].map((text, i) => (
+          {Array.map((text, i) => (
             <h2
               key={i}
               ref={(el) => (itemsRef.current[i] = el)}
@@ -50,8 +50,6 @@ export default function PinnedFeatures() {
           ))}
         </div>
       </section>
-
-      <div className="h-screen bg-gray-200" />
     </>
   );
 }

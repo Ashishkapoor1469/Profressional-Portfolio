@@ -1,4 +1,42 @@
 export const works = [
-  { id: "01", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuD121RSW8skL1qJuhyq1dicN6j9W4NOnH1T9z9rM4iWJX7afucYlZOR4dvdLsLY1VAekOc3ZEsyFfr1qweThNwzxs_Z2iZu8nETb-pWWmCV_3t2wXc2sHpAlFb4tbOQGy32p8Nr0f4TkTRQCiGIeywVCxG4rjP-U0HJSDjh6DK72FPsjFyKoitzkYTBgSFCJmVpUpjvja_OPhPmID7OI-KlW6Bv5K8AXRZMk589jF_Q-8jpi3uVDh4IRfE5uuOGCXVSYni3DNHeclQC" },
-  { id: "02", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDU_p8AdBVBmA1TCcYlRODBLikHPg9gWRJCHQEY7vzx9dYyVf3ZobWmYWGFd2FF1UvHwlVfTOOJU572gjOgy_BUufG3e3cPlI2GkwzdOXl-mnafqku5uFwi6I5jj7QN2RTwM2kjnN-wOtvjfpwxBkmTohtFDjLffHrkZRDG2li8hOf730OQ98A7DDpHCj7B_LKvGGwhSDfp7EGMyzYm-lNhC4VVCgUgH1I8jY9CHjvZxLI17tc_Sda7fDzsQVaMkjvUidWqno4u5ueC" },
+  {
+    id: "01",
+    img: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fm=webp&q=80&w=1200", // mountains
+  },
+  {
+    id: "02",
+    img: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fm=webp&q=80&w=1200", // forest
+  },
+  {
+    id: "03",
+    img: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fm=webp&q=80&w=1200", // lake
+  },
+  {
+    id: "04",
+    img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fm=webp&q=80&w=1200", // ocean
+  },
+  {
+    id: "05",
+    img: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fm=webp&q=80&w=1200", // valley
+  },
+  {
+    id: "06",
+    img: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fm=webp&q=80&w=1200", // river
+  },
+  {
+    id: "07",
+    img: "https://images.unsplash.com/photo-1441716844725-09cedc13a4e7?auto=format&fm=webp&q=80&w=1200", // trees
+  },
+  {
+    id: "08",
+    img: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fm=webp&q=80&w=1200", // mountains
+  },
+  {
+    id: "09",
+    img: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fm=webp&q=80&w=1200", // sunrise
+  },
+  {
+    id: "10",
+    img: "https://images.unsplash.com/photo-1434725039720-aaad6dd32dfe?auto=format&fm=webp&q=80&w=1200", // landscape
+  },
 ];

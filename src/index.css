@@ -5,6 +5,12 @@
   letter-spacing: -0.05em;
 }
 
+.line{
+  transform: translateY(100%);
+  will-change: transform;
+}
+
+
 @font-face {
   font-family: "Poppins";
   src: url("./assets/fonts/gc-epic-pro-font/GC-EPICPRO-Demo-BF6891cc5419ab8.ttf") format("truetype");
