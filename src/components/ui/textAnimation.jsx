@@ -89,7 +89,11 @@ export default function TextAn({
   }
 
   return (
-    <div ref={containerRef} className="flex flex-col items-center  w-full sm:flex-row justify-between pb-15" data-copy-wapper="true">
+    <div
+      ref={containerRef}
+      className="flex flex-col  lines items-center  w-full sm:flex-row justify-between pb-15"
+      data-copy-wapper="true"
+    >
       {children}
     </div>
   );

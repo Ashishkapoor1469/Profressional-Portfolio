@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function PinnedFeatures({ Array }) {
   const sectionRef = useRef(null);
   const itemsRef = useRef([]);
-
+  const imgRef = useRef(null);
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
@@ -19,8 +19,9 @@ export default function PinnedFeatures({ Array }) {
           pin: true,
         },
       });
-
-      itemsRef.current.forEach((item, i) => {
+        
+       
+      itemsRef.current.forEach((item) => {
         tl.fromTo(
           item,
           { opacity: 0, y: 50 },
@@ -35,16 +36,18 @@ export default function PinnedFeatures({ Array }) {
   return (
     <>
       <section
+        id="about"
         ref={sectionRef}
         className="h-screen bg-black text-white flex items-center justify-center"
       >
         <div className="absolute h-screen w-full z-0">
-        <img
-          className="w-full h-full object-cover mix-blend-luminosity opacity-90 contrast-125"
-          src="/assets/2.png"
-          alt=""
-        />
-      </div>
+          <img
+            ref={imgRef}
+            className="w-full h-full object-cover mix-blend-luminosity opacity-90 grayscale"
+            src="/assets/1.png"
+            alt=""
+          />
+        </div>
         <div className="relative w-full max-w-xl text-center">
           {Array.map((text, i) => (
             <h2

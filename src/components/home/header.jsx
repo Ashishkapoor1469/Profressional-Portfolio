@@ -17,7 +17,8 @@ export default function Header() {
       gsap.from(".nav-item", {
         opacity: 0,
         y: 20,
-        duration: 0.6,
+        duration: 0.8,
+        delay: 0.8,
         ease: "power3.out",
         stagger: {
           each: 0.1,
@@ -29,8 +30,8 @@ export default function Header() {
     return () => ctx.revert();
   }, []);
   return (
-    <header className="absolute top-0 w-full z-50 px-8 py-6 flex justify-between items-start">
-      <div className="font-display text-3xl tracking-tighter font-mono uppercase text-white">
+    <header className="absolute top-0 w-full z-50 px-8 py-6 flex justify-between items-start ">
+      <div  className="font-display text-3xl tracking-tighter font-mono uppercase text-white">
         Ashish
       </div>
 

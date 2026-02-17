@@ -42,7 +42,7 @@ export default function Hero() {
 
       {/* Title */}
       <div className="z-10 px-6 md:px-12 pb-12 absolute top-2/3 -translate-y-1/2 w-full">
-        <TextAn>
+        <TextAn delay={0.8}>
           <h1
             style={{ fontFamily: "Poppins" }}
             className="text-[10vw] uppercase text-white overlap-text select-none"
@@ -66,9 +66,9 @@ export default function Hero() {
           <p className="mt-4 font-mono text-[10px] opacity-50">02 // 25</p>
         </div>
 
-        <div className="p-1">
+        <div className="p-1 border bg-white">
           <img
-            className="w-24 h-32 object-cover grayscale"
+            className="w-24 h-32 object-cover grayscale hover:grayscale-0 transition-all duration-500"
             src="/assets/boy.webp"
             alt="profile"
           />

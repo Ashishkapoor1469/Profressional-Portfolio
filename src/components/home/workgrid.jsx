@@ -43,7 +43,7 @@ export default function WorkGrid() {
 
   return (
     <section  id="projects" className="py-24 border-t project  border-black/5 dark:border-white/5 w-full">
-      <div className="max-w-screen-2xl mx-auto">
+      <div className=" mx-auto">
         <div className="w-full p-1 flex sm:flex-row border-b border-neutral-700 flex-col sm:justify-between items-center">
           <TextAn>
             <h2
