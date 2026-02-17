@@ -43,26 +43,38 @@ export default function HrSection() {
         >
           {/* SECTION 1 */}
           <Section
-            title="Fast Performance"
-            description="Optimized architecture focused on speed, smooth animations, and efficient rendering."
-            cardTitle="Performance Highlights"
-            cardDescription="Fast load times, smooth interactions, and optimized rendering for a premium experience."
+            title="Eduvibe"
+            role="Full Stack Developer"
+            year="2025"
+            description="A modern language-learning platform with authentication, progress tracking, and interactive UI focused on performance and accessibility."
+            image="/assets/boy.webp"
+            techStack={["React", "Tailwind CSS", "Node.js", "MongoDB"]}
+            liveLink="https://eduvibe.vercel.app"
+            githubLink="https://github.com/yourusername/eduvibe"
           />
 
           {/* SECTION 2 */}
           <Section
             title="Scalable Design"
+            role="Scalable Architecture"
             description="Built to grow effortlessly with modular components and clean structure."
-            cardTitle="Scalability Features"
-            cardDescription="Modular components, clean architecture, and best practices for easy maintenance and growth."
+            image="/assets/boy.webp"
+            techStack={[
+              "Component-Based Design",
+              "Clean Code",
+              "Modular Architecture",
+            ]}
+            liveLink=""
+            githubLink=""
           />
 
           {/* SECTION 3 */}
           <Section
             title="Reliable Stack"
+            role=""
             description="Uses proven tools and best practices to ensure stability and consistency."
-            cardTitle="Tech Stack"
-            cardDescription="React, GSAP, and modern web technologies for a robust and reliable portfolio."
+            image="/assets/boy.webp"
+            techStack={[]}
           />
 
           {/* SECTION 4 */}
@@ -71,6 +83,7 @@ export default function HrSection() {
             description="Minimal UI, bold typography, and smooth interactions for premium feel."
             cardTitle="Design Philosophy"
             cardDescription="Minimalistic design, bold typography, and smooth animations for a modern, premium user experience."
+            image="/assets/boy.webp"
           />
         </div>
       </div>
@@ -79,4 +92,3 @@ export default function HrSection() {
 }
 
 /* ---------- Reusable Section Component ---------- */
-

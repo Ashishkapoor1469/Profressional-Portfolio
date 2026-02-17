@@ -43,8 +43,8 @@ export default function PinnedFeatures({ Array }) {
         <div className="absolute h-screen w-full z-0">
           <img
             ref={imgRef}
-            className="w-full h-full object-cover mix-blend-luminosity opacity-90 grayscale"
-            src="/assets/1.png"
+            className="w-full h-full object-cover mix-blend-luminosity opacity-10 grayscale"
+            src="/assets/1.webp"
             alt=""
           />
         </div>

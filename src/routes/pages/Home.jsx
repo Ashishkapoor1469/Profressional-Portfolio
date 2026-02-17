@@ -2,8 +2,7 @@ import ReactLenis from "lenis/react";
 import Header from "../../components/home/header";
 import Hero from "../../components/home/hero";
 import WorkGrid from "../../components/home/workgrid";
-import PinnedFeatures from "./pinedfeature";
-import Landing from "../../components/home/LandingAnimation";
+import PinnedFeatures from "../../components/ui/pinedfeature";
 import HrSection from "../../components/home/horizontalscrollsection";
 
 export default function Home() {
