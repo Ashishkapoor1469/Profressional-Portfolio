@@ -1,3 +1,4 @@
+import { Github } from "lucide-react";
 export function Section({
   id,
   title,
@@ -31,6 +32,7 @@ export function Section({
          border lg:p-15 p-4 border-white/20
         "
       >
+        
         {/* LEFT – PROJECT INFO */}
         <div className="flex flex-col gap-3 md:gap-4 max-w-xl">
           {(role || year) && (
@@ -40,18 +42,18 @@ export function Section({
           )}
 
           <h2 className="text-3xl md:text-6xl font-bold leading-tight">
-            {title}
+           {title}
           </h2>
 
           <p className="text-sm md:text-lg text-white/75">{description}</p>
 
           {/* TECH STACK */}
           {techStack.length > 0 && (
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-1">
               {techStack.map((tech, index) => (
                 <span
                   key={index}
-                  className="border border-white/20 px-3 py-1 md:px-4 md:py-1.5 rounded-full text-xs md:text-sm text-white/80"
+                  className="border border-white/20 px-3 py-1 md:px-4 md:py-1.5 rounded-full text-[12px] text-white/80"
                 >
                   {tech}
                 </span>
@@ -75,9 +77,9 @@ export function Section({
               <a
                 href={githubLink}
                 target="_blank"
-                className="font-medium hover:underline"
+                className="font-medium hover:underline flex items-center gap-1"
               >
-                GitHub
+               <Github size={14}/> GitHub
               </a>
             )}
           </div>
@@ -90,7 +92,7 @@ export function Section({
               src={image}
               alt={title}
               className="
-                w-full h-50 md:h-105
+                w-full h-60 md:h-105
                 object-contain
                 rounded-3xl
                 transform group-hover:scale-105

@@ -7,6 +7,7 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(SplitText, ScrollTrigger);
 export default function TextAn({
   children,
+  className,
   animateOnScroll = true,
   delay = 0.1,
 }) {
@@ -91,7 +92,7 @@ export default function TextAn({
   return (
     <div
       ref={containerRef}
-      className="flex flex-col  lines items-center  w-full sm:flex-row justify-between pb-15"
+      className={`flex flex-col ${className}  lines items-center  w-full sm:flex-row justify-between pb-15`}
       data-copy-wapper="true"
     >
       {children}
