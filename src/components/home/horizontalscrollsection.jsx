@@ -1,31 +1,50 @@
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { useEffect, useRef } from "react";
+import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import { Section } from "../ui/section";
-gsap.registerPlugin(ScrollTrigger);
+
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 export default function HrSection() {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
+  const scrollTriggerRef = useRef(null);
+  const arrowsRef = useRef(null);
+  const sectionsCount = 4;
 
   useEffect(() => {
     const tween = gsap.fromTo(
       sectionRef.current,
       { x: 0 },
       {
-        x: "-300vw",
+        x: `-${(sectionsCount - 1) * 100}vw`,
         ease: "none",
         scrollTrigger: {
           trigger: triggerRef.current,
           start: "top top",
           end: "+=2000",
-          scrub: 0.6,
+          scrub: true,
           pin: true,
           snap: {
-            snapTo: 1 / 3,
+            snapTo: 1 / (sectionsCount - 1),
             duration: 0.6,
-            delay: 1.5,
             ease: "power1.inOut",
+          },
+          onUpdate: (self) => {
+            scrollTriggerRef.current = self;
+          },
+          onEnter: () => {
+            gsap.to(arrowsRef.current, { autoAlpha: 1 });
+          },
+          onLeave: () => {
+            gsap.to(arrowsRef.current, { autoAlpha: 0 });
+          },
+          onEnterBack: () => {
+            gsap.to(arrowsRef.current, { autoAlpha: 1 });
+          },
+          onLeaveBack: () => {
+            gsap.to(arrowsRef.current, { autoAlpha: 0 });
           },
         },
       },
@@ -34,8 +53,51 @@ export default function HrSection() {
     return () => tween.kill();
   }, []);
 
+  const goToSection = (direction) => {
+    const st = scrollTriggerRef.current;
+    if (!st) return;
+
+    const snap = 1 / (sectionsCount - 1);
+    const current = Math.round(st.progress / snap) * snap;
+
+    const target =
+      direction === "next"
+        ? Math.min(current + snap, 1)
+        : Math.max(current - snap, 0);
+
+    gsap.to(window, {
+      scrollTo: st.start + target * (st.end - st.start),
+      duration: 0.8,
+      ease: "power2.inOut",
+    });
+  };
+
   return (
-    <section className="scroll-section-outer h-auto overflow-hidden bg-black text-white">
+    <section
+      id="projects"
+      className="relative scroll-section-outer overflow-hidden bg-black text-white"
+    >
+      {/* ARROW NAVIGATION */}
+      <div
+        ref={arrowsRef}
+        className="fixed bottom-10 md:bottom-1 md:left-0 left-30 w-full z-50 flex justify-center gap-3 opacity-0 pointer-events-auto"
+      >
+        <button
+          onClick={() => goToSection("prev")}
+          className="md:w-12 w-7 h-7 md:h-12  rounded-full border border-white/30 flex items-center justify-center hover:bg-white hover:text-black transition"
+        >
+          ←
+        </button>
+
+        <button
+          onClick={() => goToSection("next")}
+          className="md:w-12 w-7 h-7 md:h-12  rounded-full border border-white/30 flex items-center justify-center hover:bg-white hover:text-black transition"
+        >
+          →
+        </button>
+      </div>
+
+      {/* HORIZONTAL SCROLL */}
       <div ref={triggerRef}>
         <div
           ref={sectionRef}
@@ -58,6 +120,7 @@ export default function HrSection() {
             liveLink="https://minitwitter-psi.vercel.app/"
             githubLink="https://github.com/Ashishkapoor1469/Fullstackapplication"
           />
+
           <Section
             title="CODEAXE"
             role="Frontend & Logic Developer"
@@ -73,6 +136,7 @@ export default function HrSection() {
             liveLink="https://codeaxe.vercel.app/"
             githubLink="https://github.com/Ashishkapoor1469/CODEAXE"
           />
+
           <Section
             title="SkillBoost"
             role="Full Stack Developer"
@@ -88,14 +152,13 @@ export default function HrSection() {
             ]}
             liveLink="https://skill-boost-eight.vercel.app/"
             githubLink="https://github.com/Ashishkapoor1469/SkillBoost"
-          />{" "}
+          />
+
           <Section
             title="Batekaro"
             role="Frontend Developer"
             year="2024"
             description="A modern communication-focused web application emphasizing clean UI, smooth interactions, and responsive design. Built to deliver a fast and intuitive user experience."
-            cardTitle="Design Philosophy"
-            cardDescription="Focuses on minimal UI, clear typography, responsive layouts, and smooth transitions to create an engaging and user-friendly experience."
             image="/assets/3.webp"
             techStack={[
               "React",
@@ -111,5 +174,3 @@ export default function HrSection() {
     </section>
   );
 }
-
-/* ---------- Reusable Section Component ---------- */

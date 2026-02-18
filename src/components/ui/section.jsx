@@ -1,4 +1,5 @@
 export function Section({
+  id,
   title,
   description,
   image,
@@ -10,6 +11,7 @@ export function Section({
 }) {
   return (
     <section
+      id={id}
       className="
         min-w-screen h-screen
         flex items-center justify-center
@@ -21,9 +23,12 @@ export function Section({
       <div
         className="
           w-full max-w-7xl
-          flex flex-col md:flex-row
+          h-150
+          flex flex-col-reverse md:flex-row
           items-center justify-between
           gap-8 md:gap-10
+         rounded-3xl
+         border lg:p-15 p-4 border-white/20
         "
       >
         {/* LEFT – PROJECT INFO */}
@@ -38,9 +43,7 @@ export function Section({
             {title}
           </h2>
 
-          <p className="text-sm md:text-lg text-white/75">
-            {description}
-          </p>
+          <p className="text-sm md:text-lg text-white/75">{description}</p>
 
           {/* TECH STACK */}
           {techStack.length > 0 && (
@@ -81,14 +84,14 @@ export function Section({
         </div>
 
         {/* RIGHT – IMAGE CARD */}
-        <div className="relative group w-full md:w-[420px]">
+        <div className="relative group w-full md:w-105">
           <div className="overflow-hidden rounded-3xl border p-2 border-white/20">
             <img
               src={image}
               alt={title}
               className="
-                w-full h-[200px] md:h-[420px]
-                object-cover
+                w-full h-50 md:h-105
+                object-contain
                 rounded-3xl
                 transform group-hover:scale-105
                 transition duration-700

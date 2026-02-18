@@ -14,6 +14,9 @@ export default function Home() {
           <Hero />
           <WorkGrid />
           <HrSection/>
+          <div className="w-screen h-screen bg-neutral-400">
+
+          </div>
           {/* <PinnedFeatures
             Array={[
               "FAST SYSTEMS ONLY.",
