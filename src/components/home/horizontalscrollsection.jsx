@@ -46,7 +46,7 @@ export default function HrSection() {
             role="Full Stack Developer"
             year="2025"
             description="A complete full-stack web application featuring secure authentication, user profiles, content posting, and optimized API performance. Built with scalability, clean architecture, and real-world backend practices in mind."
-            image="/assets/boy.webp"
+            image="/assets/z.svg"
             techStack={[
               "React",
               "Node.js",
@@ -63,7 +63,7 @@ export default function HrSection() {
             role="Frontend & Logic Developer"
             year="2024"
             description="An interactive coding-focused platform designed to improve problem-solving and logical thinking. Emphasizes clean UI, structured content flow, and smooth user experience."
-            image="/assets/boy.webp"
+            image="/assets/code.png"
             techStack={[
               "React",
               "JavaScript",
@@ -78,7 +78,7 @@ export default function HrSection() {
             role="Full Stack Developer"
             year="2024"
             description="A skill development platform focused on structured learning and user engagement. Designed with modular components, scalable backend logic, and clean API handling."
-            image="/assets/boy.webp"
+            image="/assets/candle.gif"
             techStack={[
               "React",
               "Node.js",
@@ -96,7 +96,7 @@ export default function HrSection() {
             description="A modern communication-focused web application emphasizing clean UI, smooth interactions, and responsive design. Built to deliver a fast and intuitive user experience."
             cardTitle="Design Philosophy"
             cardDescription="Focuses on minimal UI, clear typography, responsive layouts, and smooth transitions to create an engaging and user-friendly experience."
-            image="/assets/boy.webp"
+            image="/assets/3.webp"
             techStack={[
               "React",
               "Tailwind CSS",
