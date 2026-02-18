@@ -35,55 +35,76 @@ export default function HrSection() {
   }, []);
 
   return (
-    <section className="scroll-section-outer overflow-hidden bg-black text-white">
+    <section className="scroll-section-outer h-auto overflow-hidden bg-black text-white">
       <div ref={triggerRef}>
         <div
           ref={sectionRef}
           className="scroll-section-inner h-screen w-[400vw] flex"
         >
-          {/* SECTION 1 */}
           <Section
-            title="Eduvibe"
+            title="Fullstack Application"
             role="Full Stack Developer"
             year="2025"
-            description="A modern language-learning platform with authentication, progress tracking, and interactive UI focused on performance and accessibility."
-            image="/assets/boy.webp"
-            techStack={["React", "Tailwind CSS", "Node.js", "MongoDB"]}
-            liveLink="https://eduvibe.vercel.app"
-            githubLink="https://github.com/yourusername/eduvibe"
-          />
-
-          {/* SECTION 2 */}
-          <Section
-            title="Scalable Design"
-            role="Scalable Architecture"
-            description="Built to grow effortlessly with modular components and clean structure."
+            description="A complete full-stack web application featuring secure authentication, user profiles, content posting, and optimized API performance. Built with scalability, clean architecture, and real-world backend practices in mind."
             image="/assets/boy.webp"
             techStack={[
+              "React",
+              "Node.js",
+              "Express.js",
+              "MongoDB",
+              "JWT Authentication",
+              "REST APIs",
+            ]}
+            liveLink="https://minitwitter-psi.vercel.app/"
+            githubLink="https://github.com/Ashishkapoor1469/Fullstackapplication"
+          />
+          <Section
+            title="CODEAXE"
+            role="Frontend & Logic Developer"
+            year="2024"
+            description="An interactive coding-focused platform designed to improve problem-solving and logical thinking. Emphasizes clean UI, structured content flow, and smooth user experience."
+            image="/assets/boy.webp"
+            techStack={[
+              "React",
+              "JavaScript",
+              "Tailwind CSS",
               "Component-Based Design",
-              "Clean Code",
+            ]}
+            liveLink="https://codeaxe.vercel.app/"
+            githubLink="https://github.com/Ashishkapoor1469/CODEAXE"
+          />
+          <Section
+            title="SkillBoost"
+            role="Full Stack Developer"
+            year="2024"
+            description="A skill development platform focused on structured learning and user engagement. Designed with modular components, scalable backend logic, and clean API handling."
+            image="/assets/boy.webp"
+            techStack={[
+              "React",
+              "Node.js",
+              "Express.js",
+              "MongoDB",
               "Modular Architecture",
             ]}
-            liveLink=""
-            githubLink=""
-          />
-
-          {/* SECTION 3 */}
+            liveLink="https://skill-boost-eight.vercel.app/"
+            githubLink="https://github.com/Ashishkapoor1469/SkillBoost"
+          />{" "}
           <Section
-            title="Reliable Stack"
-            role=""
-            description="Uses proven tools and best practices to ensure stability and consistency."
-            image="/assets/boy.webp"
-            techStack={[]}
-          />
-
-          {/* SECTION 4 */}
-          <Section
-            title="Modern Experience"
-            description="Minimal UI, bold typography, and smooth interactions for premium feel."
+            title="Batekaro"
+            role="Frontend Developer"
+            year="2024"
+            description="A modern communication-focused web application emphasizing clean UI, smooth interactions, and responsive design. Built to deliver a fast and intuitive user experience."
             cardTitle="Design Philosophy"
-            cardDescription="Minimalistic design, bold typography, and smooth animations for a modern, premium user experience."
+            cardDescription="Focuses on minimal UI, clear typography, responsive layouts, and smooth transitions to create an engaging and user-friendly experience."
             image="/assets/boy.webp"
+            techStack={[
+              "React",
+              "Tailwind CSS",
+              "Responsive Design",
+              "UI/UX Principles",
+            ]}
+            liveLink="https://chatttkero.vercel.app/"
+            githubLink="https://github.com/Ashishkapoor1469/Batekaro"
           />
         </div>
       </div>

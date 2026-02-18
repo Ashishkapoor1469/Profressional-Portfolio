@@ -14,14 +14,14 @@ export default function Home() {
           <Hero />
           <WorkGrid />
           <HrSection/>
-          <PinnedFeatures
+          {/* <PinnedFeatures
             Array={[
               "FAST SYSTEMS ONLY.",
               "NO COMPROMISES.",
               "SCALABILITY FIRST.",
               "USER EXPERIENCE ALWAYS.",
             ]}
-          />
+          /> */}
         </main>
       </ReactLenis>
     </>

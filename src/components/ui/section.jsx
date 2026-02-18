@@ -9,39 +9,60 @@ export function Section({
   githubLink,
 }) {
   return (
-    <section className="h-screen w-screen flex items-center justify-center px-6 md:px-20 bg-black text-white">
-      <div className="w-full h-full flex  md:flex-row flex-col justify-between py-7 md:justify-center items-center gap-2">
+    <section
+      className="
+        min-w-screen h-screen
+        flex items-center justify-center
+        px-4 md:px-20
+        bg-black text-white
+        snap-center
+      "
+    >
+      <div
+        className="
+          w-full max-w-7xl
+          flex flex-col md:flex-row
+          items-center justify-between
+          gap-8 md:gap-10
+        "
+      >
         {/* LEFT – PROJECT INFO */}
-        <div className="flex gap-2 flex-col">
-          <p className="text-sm uppercase tracking-widest text-white/60 ">
-            {role} • {year}
-          </p>
+        <div className="flex flex-col gap-3 md:gap-4 max-w-xl">
+          {(role || year) && (
+            <p className="text-xs md:text-sm uppercase tracking-widest text-white/60">
+              {role} {role && year && "•"} {year}
+            </p>
+          )}
 
-          <h2 className="text-4xl md:text-6xl font-bold leading-tight">
+          <h2 className="text-3xl md:text-6xl font-bold leading-tight">
             {title}
           </h2>
 
-          <p className="md:text-lg  text-white/75">{description}</p>
+          <p className="text-sm md:text-lg text-white/75">
+            {description}
+          </p>
 
           {/* TECH STACK */}
-          <div className="flex flex-wrap gap-1">
-            {techStack.map((tech, index) => (
-              <span
-                key={index}
-                className="border border-white/20 px-4 py-1.5 rounded-full text-sm text-white/80"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
+          {techStack.length > 0 && (
+            <div className="flex flex-wrap gap-2">
+              {techStack.map((tech, index) => (
+                <span
+                  key={index}
+                  className="border border-white/20 px-3 py-1 md:px-4 md:py-1.5 rounded-full text-xs md:text-sm text-white/80"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          )}
 
           {/* ACTION BUTTONS */}
-          <div className="flex gap-1 text-sm">
+          <div className="flex gap-4 text-xs md:text-sm mt-1 md:mt-2">
             {liveLink && (
               <a
                 href={liveLink}
                 target="_blank"
-                className="py-3  px-2 font-medium text-green-500"
+                className="font-medium text-green-400 hover:underline"
               >
                 Live Demo →
               </a>
@@ -51,7 +72,7 @@ export function Section({
               <a
                 href={githubLink}
                 target="_blank"
-                className="px-2 py-3 font-medium "
+                className="font-medium hover:underline"
               >
                 GitHub
               </a>
@@ -60,12 +81,18 @@ export function Section({
         </div>
 
         {/* RIGHT – IMAGE CARD */}
-        <div className="relative group p-4">
-          <div className="overflow-hidden rounded-3xl border border-white/20">
+        <div className="relative group w-full md:w-[420px]">
+          <div className="overflow-hidden rounded-3xl border p-2 border-white/20">
             <img
               src={image}
               alt={title}
-              className="w-100 h-100 object-cover transform group-hover:scale-105 transition duration-700"
+              className="
+                w-full h-[200px] md:h-[420px]
+                object-cover
+                rounded-3xl
+                transform group-hover:scale-105
+                transition duration-700
+              "
             />
           </div>
 
