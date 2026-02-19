@@ -80,18 +80,18 @@ export default function HrSection() {
       {/* ARROW NAVIGATION */}
       <div
         ref={arrowsRef}
-        className="fixed bottom-11 md:bottom-1 md:left-0 left-30 w-full z-50 flex justify-center gap-3 opacity-0 pointer-events-auto"
+        className="fixed bottom-2 md:bottom-1 md:left-0 w-full z-50 flex justify-center gap-3 opacity-0 pointer-events-auto"
       >
         <button
           onClick={() => goToSection("prev")}
-          className="md:w-12 w-7 h-7 md:h-12  rounded-full border border-white/30 flex items-center justify-center hover:bg-white hover:text-black transition"
+          className="h-12 w-12 rounded-full border border-white/30 flex items-center justify-center hover:bg-white hover:text-black transition"
         >
           ←
         </button>
 
         <button
           onClick={() => goToSection("next")}
-          className="md:w-12 w-7 h-7 md:h-12  rounded-full border border-white/30 flex items-center justify-center hover:bg-white hover:text-black transition"
+          className="w-12 h-12  rounded-full border border-white/30 flex items-center justify-center hover:bg-white hover:text-black transition"
         >
           →
         </button>

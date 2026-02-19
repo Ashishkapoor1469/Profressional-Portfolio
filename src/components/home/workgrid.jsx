@@ -33,7 +33,7 @@ export default function WorkGrid() {
               end: "top 55%",
               scrub: true, // 👈 progress-based animation
             },
-          }
+          },
         );
       });
     }, gridRef);
@@ -42,7 +42,10 @@ export default function WorkGrid() {
   }, []);
 
   return (
-    <section  id="about" className="py-24 border-t project  border-black/5 dark:border-white/5 w-full">
+    <section
+      id="about"
+      className="py-24 border-t project  border-black/5 dark:border-white/5 w-full"
+    >
       <div className=" mx-auto">
         <div className="w-full p-1 flex sm:flex-row border-b border-neutral-700 flex-col sm:justify-between items-center">
           <TextAn>
