@@ -6,6 +6,7 @@ import PinnedFeatures from "../../components/ui/pinedfeature";
 import HrSection from "../../components/home/horizontalscrollsection";
 import Footer from "../../components/home/footer";
 import Landing from "../../components/home/LandingAnimation";
+import TextC from "../../components/home/Textcome";
 
 export default function Home() {
   return (
@@ -17,10 +18,8 @@ export default function Home() {
           <Hero />
           <WorkGrid />
           <HrSection/>
-           
-          <div className="w-screen h-screen bg-black flex justify-center items-center">
-helooo
-          </div>
+           <TextC/>
+          
           {/* <PinnedFeatures
             Array={[
               "FAST SYSTEMS ONLY.",
