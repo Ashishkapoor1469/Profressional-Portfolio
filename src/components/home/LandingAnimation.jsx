@@ -59,8 +59,9 @@ export default function Landing() {
           {text.split("").map((char, i) => (
             <span
               key={i}
+               style={{ fontFamily: "stain" }}
               ref={(el) => (lettersRef.current[i] = el)}
-              className="text-[36px] tracking-[6px] text-white font-bold"
+              className="text-[36px] tracking-[6px] text-white font-bold "
             >
               {char === " " ? "\u00A0" : char}
             </span>

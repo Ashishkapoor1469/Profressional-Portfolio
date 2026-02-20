@@ -44,7 +44,7 @@ export default function Hero() {
       <div className="z-10 px-6 md:px-12 pb-12 absolute top-2/3 -translate-y-1/2 w-full">
         <TextAn delay={0.8}>
           <h1
-            style={{ fontFamily: "Poppins" }}
+            style={{ fontFamily: "stain" }}
             className="text-[10vw] uppercase text-white overlap-text select-none"
           >
             <p>Ashish</p>
@@ -54,7 +54,7 @@ export default function Hero() {
       </div>
 
       {/* Info Card */}
-      <div className="z-10 flex lg:flex-row justify-end items-end flex-col-reverse gap-8 text-white px-6 pb-6">
+      <div  className="z-10 flex lg:flex-row justify-end items-end flex-col-reverse gap-8 text-white px-6 pb-6">
         <div className="lg:block text-right max-w-sm">
           <p className="text-[10px] uppercase tracking-[0.2em] text-center sm:text-end mb-4 opacity-70">
             Creative Full-Stack Developer

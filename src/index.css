@@ -44,3 +44,38 @@
   font-weight: 700;
   font-style: normal;
 }
+
+
+@font-face {
+  font-family: "rocline";
+  src: url("./assets/fonts/rocline/RoclinePersonalUseOnly-Regular.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "bulgia";
+  src: url("./assets/fonts/bulgia/Bulgia.otf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sakire";
+  src: url("./assets/fonts/sakire/Sakire.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "stain";
+  src: url("./assets/fonts/stain_street/StainStreet_PERSONAL_USE_ONLY.otf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "stars";
+  src: url("./assets/fonts/when_the_stars_align/WhenTheStarsAlign_PERSONAL_USE_ONLY.otf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+

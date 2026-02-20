@@ -59,7 +59,7 @@ export default function BigTextSlide({ title, subtitle }) {
   }, []);
 
   return (
-    <div className="relative [&>img]:grayscale flex h-screen w-screen items-center justify-center bg-black overflow-hidden px-6">
+    <div  className="relative [&>img]:grayscale flex h-screen w-screen items-center justify-center bg-black overflow-hidden px-6">
       {/* TOP LEFT */}
       <img
         ref={(el) => (itemsRef.current[0] = el)}
@@ -98,7 +98,7 @@ export default function BigTextSlide({ title, subtitle }) {
 
       {/* TEXT */}
       <div className="relative z-10 max-w-5xl text-center">
-        <h1 className="text-[clamp(3rem,8vw,7rem)] font-bold leading-none tracking-tight text-white">
+        <h1 style={{ fontFamily: "bulgia" }}  className="text-[clamp(2rem,8vw,7rem)] font-bold leading-none space-y-0.5 tracking-tight text-white">
           {title}
         </h1>
 

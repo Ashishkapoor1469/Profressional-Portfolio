@@ -20,6 +20,7 @@ export default function Section({
         bg-black text-white
         snap-center
       "
+      
     >
       <div
         className="
@@ -41,11 +42,11 @@ export default function Section({
             </p>
           )}
 
-          <h2 className="text-3xl md:text-6xl text-start font-bold leading-tight">
+          <h2 style={{ fontFamily: "stain" }}   className="text-3xl md:text-6xl text-start font-bold leading-tight">
            {title}
           </h2>
 
-          <p className="text-sm text-start md:text-lg text-white/75">{description}</p>
+          <p style={{ fontFamily: "stars" }} className="text-sm text-start md:text-lg text-white/75">{description}</p>
 
           {/* TECH STACK */}
           {techStack.length > 0 && (

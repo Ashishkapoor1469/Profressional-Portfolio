@@ -50,7 +50,7 @@ export default function WorkGrid() {
         <div className="w-full p-1 flex sm:flex-row border-b border-neutral-700 flex-col sm:justify-between items-center">
           <TextAn>
             <h2
-              style={{ fontFamily: "Poppins" }}
+              style={{ fontFamily: "stain" }}
               className="font-display text-4xl min-[264px]:text-6xl md:text-8xl uppercase text-center pb-4"
             >
               CURATED <br /> WORK
