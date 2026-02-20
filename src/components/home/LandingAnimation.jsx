@@ -1,48 +1,76 @@
-import { useLayoutEffect, useRef } from "react";
-import gsap from "gsap";
-import { Loader2 } from "lucide-react";
-const digits = [
-  { digitF: 0, digitE: 0 },
-  { digitF: 6, digitE: 5 },
-  { digitF: 9, digitE: 8 },
-  { digitF: 9, digitE: 9 },
-  { digitF: 2, digitE: 7 },
-];
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+
 export default function Landing() {
-  const sectionRef = useRef(null);
-  const countRef = useRef(null);
-  useLayoutEffect(() => {}, []);
+  const containerRef = useRef(null);
+  const lettersRef = useRef([]);
+  const barRef = useRef(null);
+
+  const text = "ASHISH KAPOOR";
+
+  useEffect(() => {
+    const letters = lettersRef.current;
+    const letterDuration = 0.12;
+    const totalDuration = letters.length * letterDuration;
+
+    // Initial states
+    gsap.set(letters, { opacity: 0.25 });
+    gsap.set(barRef.current, { scaleX: 0 });
+
+    const tl = gsap.timeline();
+
+    // Letters fill one-by-one
+    tl.to(letters, {
+      opacity: 1,
+      stagger: letterDuration,
+      duration: 0.01, // instant per letter (stagger controls timing)
+      ease: "none",
+    });
+
+    //  Progress bar synced EXACTLY
+    tl.to(
+      barRef.current,
+      {
+        scaleX: 1,
+        duration: totalDuration,
+        ease: "none",
+      },
+      0, // start at same time as letters
+    );
+
+    //  Slide screen up after everything
+    tl.to(containerRef.current, {
+      y: "-100%",
+      duration: 1.2,
+      ease: "power4.inOut",
+      delay: 0.3,
+    });
+  }, []);
+
   return (
-    <>
-      <div className="w-full fixed z-70 h-screen bg-black text-white flex justify-center items-center">
-        <div
-          className="flex flex-col w-full items-center justify-center"
-          ref={sectionRef}
-        >
-          <div className="divide absolute top-0 -translate-y-400  transition-all duration-500 h-full w-px bg-neutral-600 content-center"></div>
-          <div className="absolute bottom-45">
-            <Loader2 size={34} className="animate-spin" />
-          </div>
-          <div className=" font-semibold font-mono flex gap-1 absolute top-[50%] left-[47%]">
-            <h1 className="-translate-x-300 transition-all duration-500">
-              <span>Ashish</span>
-            </h1>
-            <h1 className="translate-x-200 transition-all duration-500">
-              <span>Kapoor</span>
-            </h1>
-          </div>
-          <div ref={countRef}>
-            {digits.map((digit, i) => {
-              return (
-                <div key={i}  className="absolute text-8xl top-[50%] left-[50%] -translate-x-13 flex">
-                  <h1 className="flex-1">{digit.digitF}</h1>
-                  <h1 className="flex-1">{digit.digitF}</h1>
-                </div>
-              );
-            })}
-          </div>
+    <div
+      ref={containerRef}
+      className="fixed inset-0 z-9999 flex items-center justify-center bg-black"
+    >
+      <div className="w-90 text-center">
+        {/* text */}
+        <div className="mb-4 flex justify-center">
+          {text.split("").map((char, i) => (
+            <span
+              key={i}
+              ref={(el) => (lettersRef.current[i] = el)}
+              className="text-[36px] tracking-[6px] text-white font-bold"
+            >
+              {char === " " ? "\u00A0" : char}
+            </span>
+          ))}
+        </div>
+
+        {/* bar */}
+        <div className="h-0.5 w-full overflow-hidden bg-white/20">
+          <div ref={barRef} className="h-full origin-left bg-white" />
         </div>
       </div>
-    </>
+    </div>
   );
 }

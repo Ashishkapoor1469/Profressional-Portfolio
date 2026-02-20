@@ -12,8 +12,8 @@ export default function Home() {
   return (
     <>
       <ReactLenis root>
-        <main className="bg-black text-white font-body w-full overflow-hidden">
-          {/* <Landing/> */}
+        <main className="bg-black text-white font-body w-full h-full overflow-hidden">
+          <Landing/>
           <Header />
           <Hero />
           <WorkGrid />
