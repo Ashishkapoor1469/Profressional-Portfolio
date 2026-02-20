@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
-import { Section } from "../ui/section";
+import BigTextSlide from "../ui/BigTextSlide";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -11,6 +11,7 @@ export default function HrSection() {
   const triggerRef = useRef(null);
   const scrollTriggerRef = useRef(null);
   const arrowsRef = useRef(null);
+
   const sectionsCount = 4;
 
   useEffect(() => {
@@ -34,20 +35,12 @@ export default function HrSection() {
           onUpdate: (self) => {
             scrollTriggerRef.current = self;
           },
-          onEnter: () => {
-            gsap.to(arrowsRef.current, { autoAlpha: 1 });
-          },
-          onLeave: () => {
-            gsap.to(arrowsRef.current, { autoAlpha: 0 });
-          },
-          onEnterBack: () => {
-            gsap.to(arrowsRef.current, { autoAlpha: 1 });
-          },
-          onLeaveBack: () => {
-            gsap.to(arrowsRef.current, { autoAlpha: 0 });
-          },
+          onEnter: () => gsap.to(arrowsRef.current, { autoAlpha: 1 }),
+          onLeave: () => gsap.to(arrowsRef.current, { autoAlpha: 0 }),
+          onEnterBack: () => gsap.to(arrowsRef.current, { autoAlpha: 1 }),
+          onLeaveBack: () => gsap.to(arrowsRef.current, { autoAlpha: 0 }),
         },
-      },
+      }
     );
 
     return () => tween.kill();
@@ -75,12 +68,12 @@ export default function HrSection() {
   return (
     <section
       id="projects"
-      className="relative scroll-section-outer overflow-hidden bg-black text-white"
+      className="relative overflow-hidden bg-black text-white"
     >
-      {/* ARROW NAVIGATION */}
+      {/* ARROWS */}
       <div
         ref={arrowsRef}
-        className="fixed bottom-2 md:bottom-1 md:left-0 w-full z-50 flex justify-center gap-3 opacity-0 pointer-events-auto"
+        className="fixed bottom-6 left-1/2 z-50 flex -translate-x-1/2 gap-4 opacity-0"
       >
         <button
           onClick={() => goToSection("prev")}
@@ -88,10 +81,9 @@ export default function HrSection() {
         >
           ←
         </button>
-
         <button
           onClick={() => goToSection("next")}
-          className="w-12 h-12  rounded-full border border-white/30 flex items-center justify-center hover:bg-white hover:text-black transition"
+          className="h-12 w-12 rounded-full border border-white/30 flex items-center justify-center hover:bg-white hover:text-black transition"
         >
           →
         </button>
@@ -101,73 +93,26 @@ export default function HrSection() {
       <div ref={triggerRef}>
         <div
           ref={sectionRef}
-          className="scroll-section-inner h-screen w-[400vw] flex"
+          className="flex h-screen w-[400vw]"
         >
-          <Section
-            title="Fullstack Application"
-            role="Full Stack Developer"
-            year="2025"
-            description="A complete full-stack web application featuring secure authentication, user profiles, content posting, and optimized API performance. Built with scalability, clean architecture, and real-world backend practices in mind."
-            image="/assets/z.svg"
-            techStack={[
-              "React",
-              "Node.js",
-              "Express.js",
-              "MongoDB",
-              "JWT Authentication",
-              "REST APIs",
-            ]}
-            liveLink="https://minitwitter-psi.vercel.app/"
-            githubLink="https://github.com/Ashishkapoor1469/Fullstackapplication"
+          <BigTextSlide
+            title="I BUILD EXPERIENCES"
+            subtitle="Not just websites — digital products with purpose."
           />
 
-          <Section
-            title="CODEAXE"
-            role="Frontend & Logic Developer"
-            year="2024"
-            description="An interactive coding-focused platform designed to improve problem-solving and logical thinking. Emphasizes clean UI, structured content flow, and smooth user experience."
-            image="/assets/code.png"
-            techStack={[
-              "React",
-              "JavaScript",
-              "Tailwind CSS",
-              "Component-Based Design",
-            ]}
-            liveLink="https://codeaxe.vercel.app/"
-            githubLink="https://github.com/Ashishkapoor1469/CODEAXE"
+          <BigTextSlide
+            title="FULL STACK THINKING"
+            subtitle="Frontend polish meets backend architecture."
           />
 
-          <Section
-            title="SkillBoost"
-            role="Full Stack Developer"
-            year="2024"
-            description="A skill development platform focused on structured learning and user engagement. Designed with modular components, scalable backend logic, and clean API handling."
-            image="/assets/candle.gif"
-            techStack={[
-              "React",
-              "Node.js",
-              "Express.js",
-              "MongoDB",
-              "Modular Architecture",
-            ]}
-            liveLink="https://skill-boost-eight.vercel.app/"
-            githubLink="https://github.com/Ashishkapoor1469/SkillBoost"
+          <BigTextSlide
+            title="DESIGN × CODE"
+            subtitle="Where performance and aesthetics coexist."
           />
 
-          <Section
-            title="Batekaro"
-            role="Frontend Developer"
-            year="2024"
-            description="A modern communication-focused web application emphasizing clean UI, smooth interactions, and responsive design. Built to deliver a fast and intuitive user experience."
-            image="/assets/3.webp"
-            techStack={[
-              "React",
-              "Tailwind CSS",
-              "Responsive Design",
-              "UI/UX Principles",
-            ]}
-            liveLink="https://chatttkero.vercel.app/"
-            githubLink="https://github.com/Ashishkapoor1469/Batekaro"
+          <BigTextSlide
+            title="LET’S CREATE IMPACT"
+            subtitle="Projects that people actually love to use."
           />
         </div>
       </div>

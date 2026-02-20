@@ -44,6 +44,7 @@ export default function Landing() {
       duration: 1.2,
       ease: "power4.inOut",
       delay: 0.3,
+      scale:0.6
     });
   }, []);
 

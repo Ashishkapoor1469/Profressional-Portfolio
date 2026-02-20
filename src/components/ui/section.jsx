@@ -1,5 +1,5 @@
 import { Github } from "lucide-react";
-export function Section({
+export default function Section({
   id,
   title,
   description,
@@ -14,7 +14,7 @@ export function Section({
     <section
       id={id}
       className="
-        min-w-screen h-screen
+        min-w-screen h-full
         flex items-center justify-center
         px-4 md:px-20
         bg-black text-white
@@ -41,11 +41,11 @@ export function Section({
             </p>
           )}
 
-          <h2 className="text-3xl md:text-6xl font-bold leading-tight">
+          <h2 className="text-3xl md:text-6xl text-start font-bold leading-tight">
            {title}
           </h2>
 
-          <p className="text-sm md:text-lg text-white/75">{description}</p>
+          <p className="text-sm text-start md:text-lg text-white/75">{description}</p>
 
           {/* TECH STACK */}
           {techStack.length > 0 && (
