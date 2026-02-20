@@ -1,7 +1,7 @@
 import Section from "../ui/section";
 export default function Projects() {
   return (
-    <div className="w-screen h-full text-center bg-black flex flex-col gap-4 p-2  justify-center items-center">
+    <div className="w-screen h-full text-center bg-black flex flex-col gap-8 p-2 py-24  justify-center items-center">
         <Section
             title="Fullstack Application"
             role="Full Stack Developer"

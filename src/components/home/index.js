@@ -1,0 +1,7 @@
+export {default as Header} from './header';
+export {default as Footer} from './footer';
+export {default as Hero} from './hero';
+export {default as WorkGrid} from './workgrid';
+export {default as HrSection} from './horizontalscrollsection';
+export {default as Landing} from './LandingAnimation';
+export {default as Projects} from './projects';

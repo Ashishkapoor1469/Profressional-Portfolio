@@ -1,12 +1,13 @@
 import ReactLenis from "lenis/react";
-import Header from "../../components/home/header";
-import Hero from "../../components/home/hero";
-import WorkGrid from "../../components/home/workgrid";
-import HrSection from "../../components/home/horizontalscrollsection";
-import Footer from "../../components/home/footer";
-import Landing from "../../components/home/LandingAnimation";
-import TextC from "../../components/home/Textcome";
-import Projects from "../../components/home/projects";
+import {
+  Footer,
+  Header,
+  Hero,
+  HrSection,
+  Landing,
+  Projects,
+  WorkGrid,
+} from "../../components/home";
 
 export default function Home() {
   return (
@@ -18,17 +19,7 @@ export default function Home() {
           <Hero />
           <WorkGrid />
           <HrSection />
-          <Projects/>
-          <TextC />
-          
-          {/* <PinnedFeatures
-            Array={[
-              "FAST SYSTEMS ONLY.",
-              "NO COMPROMISES.",
-              "SCALABILITY FIRST.",
-              "USER EXPERIENCE ALWAYS.",
-            ]}
-          /> */}
+          <Projects />
           <Footer />
         </main>
       </ReactLenis>
