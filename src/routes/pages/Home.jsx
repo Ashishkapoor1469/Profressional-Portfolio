@@ -15,8 +15,9 @@ export default function Home() {
           {/* <Landing/> */}
           <Header />
           <Hero />
+          <WorkGrid />
           <HrSection/>
-           <WorkGrid />
+           
           <div className="w-screen h-screen bg-black flex justify-center items-center">
 helooo
           </div>
