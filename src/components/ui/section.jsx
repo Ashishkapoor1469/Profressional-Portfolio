@@ -46,7 +46,7 @@ export default function Section({
            {title}
           </h2>
 
-          <p style={{ fontFamily: "stars" }} className="text-sm text-start md:text-lg text-white/75">{description}</p>
+          <p className="text-sm text-start md:text-lg text-white/75">{description}</p>
 
           {/* TECH STACK */}
           {techStack.length > 0 && (
